@@ -1,11 +1,23 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Mapas
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+    <ion-list>
+        <ion-card *ngFor="let video of videos">
+          <img src={{video.snippet.thumbnails.medium.url}}/>
+          <ion-card-content>
+            <ion-card-title>
+                <h2>Nombre pais: {{video.snippet.title}}</h2>
+              </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-list>
+<div #map id="map_canvas" style="height: 80%;"></div>
+<h1>Geolocation estan funcionando con console.log() tenia pensado poner en esta vista el mapa y videos de turismo del pais</h1>
 
 </ion-content>
